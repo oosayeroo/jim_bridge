@@ -6,6 +6,7 @@ Exports = {
     ESXExport = "es_extended",
     OXCoreExport = "ox_core",
 
+    TSSInv = "tss-inventory",
     OXInv = "ox_inventory",
     QBInv = "qb-inventory",
     PSInv = "ps-inventory",
@@ -14,7 +15,6 @@ Exports = {
     OrigenInv = "origen_inventory",
     TgiannInv = "tgiann-inventory",
     JPRInv = "jpr-inventory",
-    TSSInv = "tss-inventory",
 
     OXLibExport = "ox_lib",
     TSSHudExport = "tss-hud",

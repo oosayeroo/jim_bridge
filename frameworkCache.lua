@@ -20,6 +20,7 @@ local Exports = {
     OrigenInv = "origen_inventory",
     TgiannInv = "tgiann-inventory",
     JPRInv = "jpr-inventory",
+    TSSInv = "tss-inventory",
 
     OXLibExport = "ox_lib",
 
@@ -122,6 +123,16 @@ end
 ---------------------
 
 local itemFunc = {
+    {   script = Exports.TSSInv,
+        cacheItem = function()
+            local success, result = pcall(function()
+                return exports[Exports.TSSInv]:Items()
+            end)
+            if success and result then
+                cache.Items = result
+            end
+        end,
+    },
     {   script = Exports.OXInv,
         cacheItem = function()
             local success, result = pcall(function()
@@ -448,6 +459,10 @@ end
 
 -- Inventory table
 local invWeightTable = {
+    [Exports.TSSInv] = { convars = {
+        weight = { key = "tss_inventory:max_weight", default = 120000 },
+        slots  = { key = "tss_inventory:slots",  default = 999 } -- slots not used in tss-inventory
+    }},
     [Exports.OXInv] = { convars = {
         weight = { key = "inventory:weight", default = 30000 },
         slots  = { key = "inventory:slots",  default = 40 }

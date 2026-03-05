@@ -3,13 +3,13 @@ Items, Vehicles, Jobs, Gangs = nil, nil, nil, nil
 -- Shared Exports Initialization
 Exports.PSInv = isStarted("lj-inventory") and "lj-inventory" or Exports.PSInv
 
-OXLibExport, QBXExport, QBExport, ESXExport, OXCoreExport =
+OXLibExport, QBXExport, QBExport, ESXExport, OXCoreExport, TSSHudExport =
     Exports.OXLibExport or "",
     Exports.QBXExport or "",
     Exports.QBExport or "",
     Exports.ESXExport or "",
-    Exports.OXCoreExport or ""
-TSSHudExport = Exports.TSSHudExport or "tss-hud"
+    Exports.OXCoreExport or "",
+    Exports.TSSHudExport or "tss-hud"
 
 OXInv, QBInv, PSInv, CoreInv, CodeMInv, OrigenInv, TgiannInv, JPRInv, TSSInv =
     Exports.OXInv or "",
